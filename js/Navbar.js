@@ -3,11 +3,11 @@ window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", window.scrollY > 0);
 })
     
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+let menutoggle = document.querySelector('.toggle');
+let navmenu = document.querySelector('.topnav ul');
+
+menutoggle.addEventListener('click', () =>
+{
+  menutoggle.classList.toggle('active');
+  navmenu.classList.toggle('activeNav');
+});
